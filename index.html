@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Официальный сайт</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2; /* Приятный серый фон */
+            color: #333; /* Черный цвет текста */
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffcc00;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px auto;
+            background-color: #fff; /* Белый фон */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .institutions {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .institution {
+            padding: 15px;
+            margin-bottom: 15px;
+            background-color: #f9f9f9; /* Светло-серый фон */
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .institution:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .institution h4 {
+            margin: 0 0 10px;
+            font-size: 18px;
+            color: #444; /* Цвет заголовков */
+        }
+
+        .institution .points {
+            font-size: 16px;
+            color: #666;
+        }
+
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .form-container label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .form-container input[type="number"],
+        .form-container select {
+            width: 150px;
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+        }
+
+        .form-container button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-container button:hover {
+            background-color: #444;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Официальный сайт</h1>
+    </header>
+
+    <nav>
+        <a href="#">Главная</a>
+        <a href="#">О нас</a>
+        <a href="#">Контакты</a>
+    </nav>
+
+    <section>
+        <h2>Добро пожаловать на наш сайт!</h2>
+        <p>Здесь вы можете найти много интересной информации о нашей компании.</p>
+        <p>Мы предлагаем широкий спектр услуг и продуктов для наших клиентов.</p>
+        <p>Не стесняйтесь связаться с нами, если у вас возникли вопросы или предложения.</p>
+    </section>
+
+    <div class="form-container">
+        <label for="minBudget">Введите свои баллы для бюджета   :</label>
+        <input type="number" id="minBudget" value="0">
+        <label for="minPaid">Введите свои баллы для платного обучения:</label>
+        <input type="number" id="minPaid" value="0">
+        <button onclick="filterAndSort()">Применить</button>
+    </div>
+
+    <div class="institutions">
+        <h3>Высшие учебные заведения Москвы:</h3>
+        <div class="institution">
+            <h4>Московский государственный университет</h4>
+            <div class="points">
+                <p>Бюджет: 241 баллов</p>
+                <p>Платное: 230 баллов</p>
+            </div>
+        </div>
+
+        <div class="institution">
+            <h4>Московский государственный университет геодезии и картографии</h4>
+            <div class="points">
+                <p>Бюджет: 148 баллов</p>
+                <p>Платное: 133 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Национальный исследовательский технологический университет МИСИС</h4>
+            <div class="points">
+                <p>Бюджет: 200 баллов</p>
+                <p>Платное: 190 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Московский физико-технический институт</h4>
+            <div class="points">
+                <p>Бюджет: 260 баллов</p>
+                <p>Платное: 210 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Национальный исследовательский университет «МЭИ»</h4>
+            <div class="points">
+                <p>Бюджет: 166 баллов</p>
+                <p>Платное: 105 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Московский городской педагогический университет</h4>
+            <div class="points">
+                <p>Бюджет: 198 баллов</p>
+                <p>Платное: 152 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Российский новый университет</h4>
+            <div class="points">
+                <p>Бюджет: 162 баллов</p>
+                <p>Платное: 115 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Российский государственный университет им. А.Н. Косыгина (Технологии. Дизайн. Искусство)</h4>
+            <div class="points">
+                <p>Бюджет: 140 баллов</p>
+                <p>Платное: 127 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Российский государственный социальный университет</h4>
+            <div class="points">
+                <p>Бюджет: 149 баллов</p>
+                <p>Платное: 118 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Финансовый университет при Правительстве Российской Федерации</h4>
+            <div class="points">
+                <p>Бюджет: 231 баллов</p>
+                <p>Платное: 112 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Московский технический университет связи и информатики</h4>
+            <div class="points">
+                <p>Бюджет: 202 баллов</p>
+                <p>Платное: 150 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Московский политехнический университет</h4>
+            <div class="points">
+                <p>Бюджет: 143 баллов</p>
+                <p>Платное: 112 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Московский государственный технический университет им. Н.Э. Баумана</h4>
+            <div class="points">
+                <p>Бюджет: 188 баллов</p>
+                <p>Платное: 124 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Российская академия народного хозяйства и государственной службы при Президенте Российской Федерации</h4>
+            <div class="points">
+                <p>Бюджет: 242 баллов</p>
+                <p>Платное: 118 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Государственный университет просвещения</h4>
+            <div class="points">
+                <p>Бюджет: 118 баллов</p>
+                <p>Платное: 93 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Институт отраслевого менеджмента РАНХиГС</h4>
+            <div class="points">
+                <p>Бюджет: 260 баллов</p>
+                <p>Платное: 122 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Московский государственный академический художественный институт им. В.И. Сурикова</h4>
+            <div class="points">
+                <p>Бюджет: 228 баллов</p>
+                <p>Платное: 166 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Российская академия музыки имени Гнесиных</h4>
+            <div class="points">
+                <p>Бюджет: 332 баллов</p>
+                <p>Платное: 255 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Российский национальный исследовательский медицинский университет имени Н. И. Пирогова</h4>
+            <div class="points">
+                <p>Бюджет: 191 баллов</p>
+                <p>Платное: 157 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Российский государственный университет нефти и газа им. И.М. Губкина</h4>
+            <div class="points">
+                <p>Бюджет: 189 баллов</p>
+                <p>Платное: 140 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Российский химико-технологический университет им. Д.И. Менделеева</h4>
+            <div class="points">
+                <p>Бюджет: 141 баллов</p>
+                <p>Платное: 114 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Российский государственный гуманитарный университет</h4>
+            <div class="points">
+                <p>Бюджет: 180 баллов</p>
+                <p>Платное: 126 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Московский государственный институт культуры</h4>
+            <div class="points">
+                <p>Бюджет: 167 баллов</p>
+                <p>Платное: 128 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Московский государственный лингвистический университет</h4>
+            <div class="points">
+                <p>Бюджет: 194 баллов</p>
+                <p>Платное: 160 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Российский институт театрального искусства</h4>
+            <div class="points">
+                <p>Бюджет: 120 баллов</p>
+                <p>Платное: 225 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Российский университет дружбы народов Им. Патриса Лумумбы</h4>
+            <div class="points">
+                <p>Бюджет: 166   баллов</p>
+                <p>Платное: 109 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Российский государственный университет туризма и сервиса</h4>
+            <div class="points">
+                <p>Бюджет: 127 баллов</p>
+                <p>Платное: 105 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Московский авиационный институт</h4>
+            <div class="points">
+                <p>Бюджет: 245 баллов</p>
+                <p>Платное: 210 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Московская государственная академия ветеринарной медицины и биотехнологии им. К.И. Скрябина</h4>
+            <div class="points">
+                <p>Бюджет: 150 баллов</p>
+                <p>Платное: 99 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Государственный университет по землеустройству</h4>
+            <div class="points">
+                <p>Бюджет: 136 баллов</p>
+                <p>Платное: 112 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Московский государственный медико-стоматологический университет</h4>
+            <div class="points">
+                <p>Бюджет: 199 баллов</p>
+                <p>Платное: 160 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Национальный исследовательский университет «Высшая школа экономики»</h4>
+            <div class="points">
+                <p>Бюджет: 251 баллов</p>
+                <p>Платное: 185 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Московский государственный университет спорта и туризма</h4>
+            <div class="points">
+                <p>Бюджет: 189 баллов</p>
+                <p>Платное: 166 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Российский университет транспорта</h4>
+            <div class="points">
+                <p>Бюджет: 121 баллов</p>
+                <p>Платное: 101 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Российский экономический университет имени Г.В. Плеханова</h4>
+            <div class="points">
+                <p>Бюджет: 199 баллов</p>
+                <p>Платное: 154 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Российский государственный аграрный университет - МСХА имени К.А. Тимирязева</h4>
+            <div class="points">
+                <p>Бюджет: 150 баллов</p>
+                <p>Платное: 85 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Московский государственный юридический университет имени О.Е. Кутафина</h4>
+            <div class="points">
+                <p>Бюджет: 274 баллов</p>
+                <p>Платное: 160 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Российский государственный геологоразведочный университет им. С. Орджоникидзе</h4>
+            <div class="points">
+                <p>Бюджет: 142 баллов</p>
+                <p>Платное: 109 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Дипломатическая академия при МИД РФ</h4>
+            <div class="points">
+                <p>Бюджет: 237 баллов</p>
+                <p>Платное: 156 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Московский социально-педагогический институт</h4>
+            <div class="points">
+                <p>Бюджет: 180 баллов</p>
+                <p>Платное: 115 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Московский автомобильно-дорожный государственный технический университет (МАДИ)</h4>
+            <div class="points">
+                <p>Бюджет: 131 баллов</p>
+                <p>Платное: 115 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>МИРЭА - Российский технологический университет</h4>
+            <div class="points">
+                <p>Бюджет: 157 баллов</p>
+                <p>Платное: 147 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Университет Мировых Цивилизаций имени В.В. Жириновского</h4>
+            <div class="points">
+                <p>Бюджет: 232 баллов</p>
+                <p>Платное: 120 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Государственный социально-гуманитарный университет</h4>
+            <div class="points">
+                <p>Бюджет: 139 баллов</p>
+                <p>Платное: 112 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Государственный гуманитарно-технологический университет</h4>
+            <div class="points">
+                <p>Бюджет: 115 баллов</p>
+                <p>Платное: 111 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Российский биотехнологический университет</h4>
+            <div class="points">
+                <p>Бюджет: 200 баллов</p>
+                <p>Платное: 195 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Высшая школа корпоративного управления РАНХиГС</h4>
+            <div class="points">
+                <p>Бюджет: 262 баллов</p>
+                <p>Платное: 145 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Российский государственный художественно-промышленный университет им. С.Г. Строганова</h4>
+            <div class="points">
+                <p>Бюджет: 216 баллов</p>
+                <p>Платное: 178 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Московский архитектурный институт (Государственная академия)</h4>
+            <div class="points">
+                <p>Бюджет: 274 баллов</p>
+                <p>Платное: 158 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Российская академия живописи, ваяния и зодчества Ильи Глазунова</h4>
+            <div class="points">
+                <p>Бюджет: 202 баллов</p>
+                <p>Платное: 115 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Российский университет спорта «ГЦОЛИФК»</h4>
+            <div class="points">
+                <p>Бюджет: 216 баллов</p>
+                <p>Платное: 90 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Московский государственный институт музыки им. А.Г. Шнитке</h4>
+            <div class="points">
+                <p>Бюджет: 361 баллов</p>
+                <p>Платное: 322 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Всероссийская академия внешней торговли Министерства экономического развития Российской Федерации</h4>
+            <div class="points">
+                <p>Бюджет: 255 баллов</p>
+                <p>Платное: 158 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Московский государственный психолого-педагогический университет</h4>
+            <div class="points">
+                <p>Бюджет: 156 баллов</p>
+                <p>Платное: 126 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Московский государственный институт международных отношений (Университет) МИД России</h4>
+            <div class="points">
+                <p>Бюджет: 277 баллов</p>
+                <p>Платное: 207 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Московская государственная консерватория им. П.И. Чайковского (университет)</h4>
+            <div class="points">
+                <p>Бюджет: 412 баллов</p>
+                <p>Платное: 281 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Национальный исследовательский Московский государственный строительный университет</h4>
+            <div class="points">
+                <p>Бюджет: 159 баллов</p>
+                <p>Платное: 109 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Всероссийский государственный университет юстиции</h4>
+            <div class="points">
+                <p>Бюджет: 262 баллов</p>
+                <p>Платное: 121 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Московский государственный университет технологий и управления им. К.Г. Разумовского</h4>
+            <div class="points">
+                <p>Бюджет: 159 баллов</p>
+                <p>Платное: 105 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Российская таможенная академия</h4>
+            <div class="points">
+                <p>Бюджет: 224 баллов</p>
+                <p>Платное: 101 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Государственный университет управления</h4>
+            <div class="points">
+                <p>Бюджет: 150 баллов</p>
+                <p>Платное: 105 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Всероссийский государственный университет кинематографии имени С. А. Герасимова</h4>
+            <div class="points">
+                <p>Бюджет: 269 баллов</p>
+                <p>Платное: 183 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Высшее театральное училище (институт) им. М.С.Щепкина при Государственном академическом Малом театре России</h4>
+            <div class="points">
+                <p>Бюджет: 381 баллов</p>
+                <p>Платное: 317 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Национальный исследовательский университет «МИЭТ»</h4>
+            <div class="points">
+                <p>Бюджет: 146 баллов</p>
+                <p>Платное: 109 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Академия хорового искусства им. В.С. Попова</h4>
+            <div class="points">
+                <p>Бюджет: 440 баллов</p>
+                <p>Платное: 270 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Государственный академический университет гуманитарных наук при Российской академии наук</h4>
+            <div class="points">
+                <p>Бюджет: 193 баллов</p>
+                <p>Платное: 155 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Московский педагогический государственный университет</h4>
+            <div class="points">
+                <p>Бюджет: 151 баллов</p>
+                <p>Платное: 105 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Российская академия адвокатуры и нотариата</h4>
+            <div class="points">
+                <p>Бюджет: 254 баллов</p>
+                <p>Платное: 159 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Московский физико-технический институт (Государственный университет)</h4>
+            <div class="points">
+                <p>Бюджет: 290 баллов</p>
+                <p>Платное: 240 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Театральный институт им. Бориса Щукина при Государственном академическом театре им. Евгения Вахтангова</h4>
+            <div class="points">
+                <p>Бюджет: 314 баллов</p>
+                <p>Платное: 200 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Российский государственный университет правосудия</h4>
+            <div class="points">
+                <p>Бюджет: 260 баллов</p>
+                <p>Платное: 130 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Государственный музыкально-педагогический институт им. М.М. Ипполитова-Иванова</h4>
+            <div class="points">
+                <p>Бюджет: 315 баллов</p>
+                <p>Платное: 245 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Литературный институт имени А.М. Горького</h4>
+            <div class="points">
+                <p>Бюджет: 341 баллов</p>
+                <p>Платное: 249 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Православный Свято-Тихоновский гуманитарный университет</h4>
+            <div class="points">
+                <p>Бюджет: 156 баллов</p>
+                <p>Платное: 110 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Национальный исследовательский ядерный университет «МИФИ»</h4>
+            <div class="points">
+                <p>Бюджет: 220 баллов</p>
+                <p>Платное: 119 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Московский государственный технический университет гражданской авиации</h4>
+            <div class="points">
+                <p>Бюджет: 127 баллов</p>
+                <p>Платное: 144 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Московский университет им. А.С. Грибоедова</h4>
+            <div class="points">
+                <p>Бюджет: 212 баллов</p>
+                <p>Платное: 94 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Институт современного искусства</h4>
+            <div class="points">
+                <p>Бюджет: 267 баллов</p>
+                <p>Платное: 120 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Российский государственный университет социальных технологий</h4>
+            <div class="points">
+                <p>Бюджет: 203 баллов</p>
+                <p>Платное: 114 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Технологический университет имени дважды Героя Советского Союза, летчика-космонавта А.А. Леонова</h4>
+            <div class="points">
+                <p>Бюджет: 147 баллов</p>
+                <p>Платное: 115 баллов</p>
+            </div>
+        </div>
+        <div class="institution">
+            <h4>Государственный университет «Дубна»</h4>
+            <div class="points">
+                <p>Бюджет: 147 баллов</p>
+                <p>Платное: 105 баллов</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function filterAndSort() {
+            var minBudget = parseInt(document.getElementById("minBudget").value);
+            var minPaid = parseInt(document.getElementById("minPaid").value);
+
+            var institutions = document.querySelectorAll(".institution");
+            institutions.forEach(function (institution) {
+                var budgetPoints = parseInt(institution.querySelector(".points p:first-child").textContent.split(":")[1]);
+                var paidPoints = parseInt(institution.querySelector(".points p:last-child").textContent.split(":")[1]);
+
+                if (budgetPoints <= minBudget || paidPoints <= minPaid) {
+                    institution.style.display = "block";
+                } else {
+                    institution.style.display = "none";
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
